@@ -5,6 +5,7 @@
 Vagrant.configure("2") do |config|
 
   config.vm.box = "puppetlabs/centos-6.6-64-puppet"
+  config.vm.box_download_insecure = true
   config.ssh.forward_agent = true # So that boxes don't have to setup key-less ssh
   config.ssh.insert_key = false # To generate a new ssh key and don't use the default Vagrant one
  
